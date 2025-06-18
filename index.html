@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +7,18 @@
 </head>
 <body>
     <h1>Micro-Sistema de control de Stock</h1>
-    <p>Codigo del Producto: <input type=""> <button id="Buscar">Buscar</button></p>
-    
+
+    <p>
+        Código del Producto: 
+        <input id="codigo" type="number"> 
+        <button id="Buscar">Buscar</button>
+    </p>
+
     <br>
 
-    <p>Nombre del Producto: <input type=""></p>
-    <p>Cantidad actual: <input type=""></p>
+    <p>Nombre del Producto: <input id="descripcion" type="text" readonly></p>
+    <p>Cantidad actual: <input id="cantidad" type="number" readonly></p>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
