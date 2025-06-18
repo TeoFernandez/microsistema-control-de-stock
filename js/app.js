@@ -41,12 +41,12 @@ addEventListener("DOMContentLoaded", () => {
         return productos;
     }
 
-    const productos = loadTestProducts();
+    let productos = loadTestProducts();
 
-    const btnBuscar = document.getElementById("Buscar");
-    const inputCodigo = document.getElementById("codigo");
-    const inputDescripcion = document.getElementById("descripcion");
-    const inputCantidad = document.getElementById("cantidad");
+    let btnBuscar = document.getElementById("Buscar");
+    let inputCodigo = document.getElementById("codigo");
+    let inputDescripcion = document.getElementById("descripcion");
+    let inputCantidad = document.getElementById("cantidad");
 
     btnBuscar.addEventListener("click", () => {
         let codigoBuscado = parseInt(inputCodigo.value);
