@@ -43,16 +43,15 @@ addEventListener("DOMContentLoaded", () => {
 
     const productos = loadTestProducts();
 
-    // Referencias a elementos del DOM
     const btnBuscar = document.getElementById("Buscar");
     const inputCodigo = document.getElementById("codigo");
     const inputDescripcion = document.getElementById("descripcion");
     const inputCantidad = document.getElementById("cantidad");
 
     btnBuscar.addEventListener("click", () => {
-        const codigoBuscado = parseInt(inputCodigo.value);
+        let codigoBuscado = parseInt(inputCodigo.value);
 
-        const producto = productos.find(p => p.codigo === codigoBuscado);
+        let producto = productos.find(p => p.codigo == codigoBuscado);
 
         if (producto) {
             inputDescripcion.value = producto.descripcion;
@@ -63,4 +62,17 @@ addEventListener("DOMContentLoaded", () => {
             inputCantidad.value = "";
         }
     });
+
+    btnActualizar.addEventListener("click",() =>{
+        let codigoBuscado =  parseInt(inputCodigo.value);
+
+        let producto = productos.find(p => p.codigo == codigoBuscado);
+
+        if(producto){
+            
+        }
+        else{
+            alert("Producto no encontrado");
+        }
+    })
 });
